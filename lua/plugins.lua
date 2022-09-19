@@ -8,8 +8,13 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- VISUAL:
-  use 'tomasiser/vim-code-dark'
-  use 'vim-airline/vim-airline'
+  -- use 'tomasiser/vim-code-dark'
+  use 'ellisonleao/gruvbox.nvim'
+  -- use 'vim-airline/vim-airline'
+  use {
+  'nvim-lualine/lualine.nvim',
+  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
   use 'ryanoasis/vim-devicons'
 
   -- LSP

@@ -14,8 +14,8 @@ set.hlsearch = false
 set.cursorline = true
 set.splitbelow = true
 set.splitright = true
-set.wrap = true
 set.ttimeoutlen = 150
+set.wrap = false
 
 vim.o.autoread = true
 vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {

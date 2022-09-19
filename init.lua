@@ -1,12 +1,9 @@
 require("global")
 require("keymaps")
 require("plugins")
+require("appearance")
 
 -- APPEARANCE
-vim.g['airline#extensions#branch#enabled'] = 1
-vim.g['airline_theme']='codedark'
-vim.g['airline_symbols.space'] = "ua0"
-vim.cmd([[colorscheme codedark]])
 
 -- PACKER AUTO SOURCE
 vim.cmd([[
@@ -21,7 +18,7 @@ vim.g['gitblame_enabled'] = 0
 
 -- TREESITTER
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = { "go", "javascript", "python", "json", "yaml" },
+  ensure_installed = { "go", "javascript", "python", "json", "yaml", "haskell" },
   sync_install = false,
   highlight = {
     enable = true,
