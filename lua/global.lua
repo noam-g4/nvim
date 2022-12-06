@@ -23,4 +23,4 @@ vim.api.nvim_create_autocmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGai
   pattern = { "*" },
 })
 
-vim.cmd [[autocmd BufWritePre * :%s/\s\+$//e]]
+-- vim.cmd [[autocmd BufWritePre * :%s/\s\+$//e]]

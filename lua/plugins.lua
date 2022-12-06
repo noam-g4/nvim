@@ -8,9 +8,11 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- VISUAL:
-  -- use 'tomasiser/vim-code-dark'
-  use 'ellisonleao/gruvbox.nvim'
-  -- use 'vim-airline/vim-airline'
+  -- use 'ellisonleao/gruvbox.nvim'
+  -- use 'Mofiqul/vscode.nvim'
+  use 'eddyekofo94/gruvbox-flat.nvim'
+  use 'https://github.com/p00f/nvim-ts-rainbow'
+
   use {
   'nvim-lualine/lualine.nvim',
   requires = { 'kyazdani42/nvim-web-devicons', opt = true }
@@ -27,17 +29,33 @@ return require('packer').startup(function(use)
   use 'tpope/vim-commentary'
   use 'http://github.com/tpope/vim-surround'
   use 'fatih/vim-go'
-  use 'puremourning/vimspector'
   use 'christoomey/vim-tmux-navigator'
   use 'mtdl9/vim-log-highlighting'
   use 'preservim/nerdtree'
   use { 'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} } }
   use 'https://github.com/neo4j-contrib/cypher-vim-syntax'
   use 'djoshea/vim-autoread'
+  use { "folke/todo-comments.nvim",
+  requires = "nvim-lua/plenary.nvim",
+  config = function()
+    require("todo-comments").setup {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
+  end
+}
 
   -- DEBUGER
   use 'mfussenegger/nvim-dap'
   use 'leoluz/nvim-dap-go'
+  use 'mfussenegger/nvim-dap-python'
+  use { "mxsdev/nvim-dap-vscode-js", requires = {"mfussenegger/nvim-dap"} }
+  use {
+    "microsoft/vscode-js-debug",
+    opt = true,
+    run = "npm install --legacy-peer-deps && npm run compile" 
+  }
 
   -- COMPLETION
   use 'hrsh7th/cmp-nvim-lsp'
