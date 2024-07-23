@@ -115,6 +115,11 @@ _G.packer_plugins = {
     path = "/Users/nyadgar/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
   },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/Users/nyadgar/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
     path = "/Users/nyadgar/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
@@ -130,15 +135,35 @@ _G.packer_plugins = {
     path = "/Users/nyadgar/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-dap"] = {
+    loaded = true,
+    path = "/Users/nyadgar/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    url = "https://github.com/mfussenegger/nvim-dap"
+  },
+  ["nvim-dap-go"] = {
+    loaded = true,
+    path = "/Users/nyadgar/.local/share/nvim/site/pack/packer/start/nvim-dap-go",
+    url = "https://github.com/leoluz/nvim-dap-go"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/nyadgar/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-tree"] = {
+    loaded = true,
+    path = "/Users/nyadgar/.local/share/nvim/site/pack/packer/start/nvim-tree",
+    url = "https://github.com/nvim-tree/nvim-tree.lua"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/Users/nyadgar/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/Users/nyadgar/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -150,10 +175,11 @@ _G.packer_plugins = {
     path = "/Users/nyadgar/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["rose-pine"] = {
+  srcery = {
+    config = { "\27LJ\2\n:\0\0\3\0\4\0\0066\0\0\0009\0\1\0009\0\2\0'\2\3\0B\0\2\1K\0\1\0\vsrcery\16colorscheme\bcmd\bvim\0" },
     loaded = true,
-    path = "/Users/nyadgar/.local/share/nvim/site/pack/packer/start/rose-pine",
-    url = "https://github.com/rose-pine/neovim"
+    path = "/Users/nyadgar/.local/share/nvim/site/pack/packer/start/srcery",
+    url = "https://github.com/srcery-colors/srcery-vim"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -177,6 +203,10 @@ time([[Defining packer_plugins]], false)
 time([[Config for conform.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fconform\frequire\0", "config", "conform.nvim")
 time([[Config for conform.nvim]], false)
+-- Config for: srcery
+time([[Config for srcery]], true)
+try_loadstring("\27LJ\2\n:\0\0\3\0\4\0\0066\0\0\0009\0\1\0009\0\2\0'\2\3\0B\0\2\1K\0\1\0\vsrcery\16colorscheme\bcmd\bvim\0", "config", "srcery")
+time([[Config for srcery]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
