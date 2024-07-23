@@ -9,6 +9,8 @@ return require("packer").startup(function(use)
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 
+	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } })
+
 	use({
 		"nvim-tree/nvim-tree.lua",
 		as = "nvim-tree",
