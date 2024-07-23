@@ -1,3 +1,4 @@
 require("nyadgar.packer")
 require("nyadgar.set")
-require("nyadgar.remap")
+
+vim.keymap.set("n", "<leader>ee", vim.cmd.Ex)
