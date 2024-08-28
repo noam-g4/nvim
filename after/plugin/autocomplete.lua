@@ -7,9 +7,9 @@ cmp.setup({
 	mapping = {
 		["<CR>"] = cmp.mapping.confirm({ select = false }),
 		["<Esc>"] = cmp.mapping.abort(),
-		["<Up>"] = cmp.mapping.select_prev_item({ behavior = "select" }),
+		["<C-[>"] = cmp.mapping.select_prev_item({ behavior = "select" }),
 		["<Down>"] = cmp.mapping.select_next_item({ behavior = "select" }),
-		["<TAB>"] = cmp.mapping(function()
+		["<C-]>"] = cmp.mapping(function()
 			if cmp.visible() then
 				cmp.select_next_item({ behavior = "insert" })
 			else
