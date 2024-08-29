@@ -38,15 +38,20 @@ return require("packer").startup(function(use)
 
 	use("tpope/vim-fugitive")
 
-	use({ "ray-x/go.nvim" })
-	use("ray-x/guihua.lua") -- recommended if need floating window support
-
 	use({
 		"stevearc/conform.nvim",
 		config = function()
 			require("conform").setup()
 		end,
 	})
+
+	use({
+		"L3MON4D3/LuaSnip",
+		dependencies = { "rafamadriz/friendly-snippets" },
+	})
+	use("rafamadriz/friendly-snippets")
+	use({ "saadparwaiz1/cmp_luasnip" })
+	use({ "hrsh7th/cmp-buffer" })
 
 	use({
 		"VonHeikemen/lsp-zero.nvim",
@@ -57,9 +62,11 @@ return require("packer").startup(function(use)
 			{ "neovim/nvim-lspconfig" },
 			{ "hrsh7th/nvim-cmp" },
 			{ "hrsh7th/cmp-nvim-lsp" },
-			{ "L3MON4D3/LuaSnip" },
 		},
 	})
+
+	use({ "ray-x/go.nvim" })
+	use("ray-x/guihua.lua") -- recommended if need floating window support
 
 	use({
 		"folke/todo-comments.nvim",

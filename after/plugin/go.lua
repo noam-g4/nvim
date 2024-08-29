@@ -1,4 +1,6 @@
-require("go").setup()
+require("go").setup({
+	-- luasnip = true,
+})
 
 local format_sync_grp = vim.api.nvim_create_augroup("GoFormat", {})
 vim.api.nvim_create_autocmd("BufWritePre", {
