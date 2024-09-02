@@ -63,4 +63,18 @@ return {
 	{ "neovim/nvim-lspconfig" },
 	{ "hrsh7th/nvim-cmp" },
 	{ "hrsh7th/cmp-nvim-lsp" },
+
+	{ "williamboman/mason.nvim", opts = {} },
+	{
+		"williamboman/mason-lspconfig.nvim",
+		config = function()
+			require("mason-lspconfig").setup({
+				handlers = {
+					function(server_name)
+						require("lspconfig")[server_name].setup({})
+					end,
+				},
+			})
+		end,
+	},
 }
