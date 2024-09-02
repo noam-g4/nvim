@@ -18,6 +18,7 @@ vim.keymap.set("n", "<C-l>", vim.cmd.bnext)
 vim.keymap.set("n", "<C-h>", vim.cmd.bprevious)
 vim.keymap.set("n", "<Esc>", function() end)
 vim.keymap.set("i", "jj", "<ESC>", { silent = true })
+vim.keymap.set("i", "{<CR>", "{<CR>}<ESC>O<TAB>", { silent = true })
 
 vim.cmd("autocmd ColorScheme * hi DiffAdd      guifg=NONE          guibg=#003300")
 vim.cmd("autocmd ColorScheme * hi DiffChange   guifg=NONE          guibg=#003355")
