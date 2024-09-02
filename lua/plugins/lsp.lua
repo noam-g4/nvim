@@ -1,4 +1,13 @@
 local function setup()
+	require("mason").setup({})
+	require("mason-lspconfig").setup({
+		handlers = {
+			function(server_name)
+				require("lspconfig")[server_name].setup({})
+			end,
+		},
+	})
+
 	local lsp_zero = require("lsp-zero")
 
 	lsp_zero.on_attach(function(_, bufnr)
@@ -49,19 +58,8 @@ local function setup()
 end
 
 return {
-	{ "williamboman/mason.nvim", opts = {} },
-	{
-		"williamboman/mason-lspconfig.nvim",
-		config = function()
-			require("mason-lspconfig").setup({
-				handlers = {
-					function(server_name)
-						require("lspconfig")[server_name].setup({})
-					end,
-				},
-			})
-		end,
-	},
+	{ "williamboman/mason.nvim" },
+	{ "williamboman/mason-lspconfig.nvim" },
 	{
 		"L3MON4D3/LuaSnip",
 		dependencies = { "rafamadriz/friendly-snippets" },
