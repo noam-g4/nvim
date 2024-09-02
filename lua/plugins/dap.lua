@@ -46,14 +46,14 @@ local function keymaps()
 end
 return {
 
-	{ "mfussenegger/nvim-dap" },
+	{ "mfussenegger/nvim-dap", config = keymaps },
 	{
 		"rcarriga/nvim-dap-ui",
-		requires = {
+		dependencies = {
 			"mfussenegger/nvim-dap",
 			"nvim-neotest/nvim-nio",
 		},
-		config = keymaps,
+		opts = {},
 	},
 	{ "leoluz/nvim-dap-go", opts = {} },
 }
