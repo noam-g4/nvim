@@ -41,6 +41,7 @@ local function setup()
 			["<S-Tab>"] = cmp_action.luasnip_shift_supertab(),
 			["<CR>"] = cmp.mapping.confirm({ select = false }),
 			["<UP>"] = cmp.mapping.select_prev_item({ behavior = "select" }),
+			["<DOWN>"] = cmp.mapping.select_next_item({ behavior = "select" }),
 		},
 
 		snippet = {
