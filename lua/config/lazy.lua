@@ -19,6 +19,6 @@ require("lazy").setup({
 	spec = {
 		{ import = "plugins" },
 	},
-	install = { colorscheme = { "srcery" } },
+	install = { colorscheme = { "gruvbox" } },
 	checker = { enabled = true },
 })
