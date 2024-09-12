@@ -11,6 +11,8 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 vim.opt.scrolloff = 8
 vim.opt.updatetime = 50
+vim.opt.undofile = true
+vim.opt.mouse = ""
 
 vim.g.mapleader = " "
 
@@ -19,6 +21,8 @@ vim.keymap.set("n", "<C-h>", vim.cmd.bprevious)
 vim.keymap.set("n", "<Esc>", function() end)
 vim.keymap.set("i", "jj", "<ESC>", { silent = true })
 vim.keymap.set("i", "{<CR>", "{<CR>}<ESC>O<TAB>", { silent = true })
+vim.keymap.set("n", "<C-y>", '"0y')
+vim.keymap.set("n", "<C-p>", '"0p')
 
 vim.cmd("autocmd ColorScheme * hi DiffAdd      guifg=NONE          guibg=#003300")
 vim.cmd("autocmd ColorScheme * hi DiffChange   guifg=NONE          guibg=#003355")
