@@ -1,6 +1,7 @@
 local function keymaps()
 	local d = require("dap")
 	local w = require("dap.ui.widgets")
+	require("nvim-dap-virtual-text").setup()
 	vim.keymap.set("n", "<leader>dc", function()
 		d.continue()
 	end)
@@ -52,6 +53,7 @@ return {
 		dependencies = {
 			"mfussenegger/nvim-dap",
 			"nvim-neotest/nvim-nio",
+			"theHamsta/nvim-dap-virtual-text",
 		},
 		opts = {},
 	},

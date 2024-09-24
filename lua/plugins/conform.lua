@@ -11,6 +11,7 @@ return {
 				javascript = { "prettierd", "prettier", stop_after_first = true },
 				json = { "prettier" },
 				go = { "gofmt" },
+				proto = { "buf" },
 			},
 		})
 
