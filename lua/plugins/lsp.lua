@@ -6,6 +6,17 @@ local function setup()
 				local lspconfig = require("lspconfig")
 				lspconfig[server_name].setup({})
 
+				lspconfig.ltex.setup({
+					settings = {
+						ltex = {
+							additionalRules = {
+								-- see https://www.reddit.com/r/neovim/comments/sdvfwr/full_diagnostic_for_grammarly_language_server_in/
+								languageModel = "~/ngrams/",
+							},
+						},
+					},
+				})
+
 				lspconfig.lua_ls.setup({
 					settings = {
 						Lua = {

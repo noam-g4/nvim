@@ -23,6 +23,7 @@ vim.keymap.set("i", "jj", "<ESC>", { silent = true })
 vim.keymap.set("i", "{<CR>", "{<CR>}<ESC>O<TAB>", { silent = true })
 vim.keymap.set("n", "<C-y>", '"0y')
 vim.keymap.set("n", "<C-p>", '"0p')
+vim.keymap.set("n", "<leader>ca", ":lua vim.lsp.buf.code_action()<CR>")
 
 vim.cmd("autocmd ColorScheme * hi DiffAdd      guifg=NONE          guibg=#003300")
 vim.cmd("autocmd ColorScheme * hi DiffChange   guifg=NONE          guibg=#003355")
