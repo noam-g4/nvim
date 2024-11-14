@@ -24,6 +24,8 @@ vim.keymap.set("i", "{<CR>", "{<CR>}<ESC>O<TAB>", { silent = true })
 vim.keymap.set("n", "<C-y>", '"0y')
 vim.keymap.set("n", "<C-p>", '"0p')
 vim.keymap.set("n", "<leader>ca", ":lua vim.lsp.buf.code_action()<CR>")
+vim.keymap.set("n", "<leader>cr", ":lua vim.lsp.buf.rename()<CR>")
+vim.keymap.set("n", "<leader>t", ":Lexplore<CR>")
 
 vim.cmd("autocmd ColorScheme * hi DiffAdd      guifg=NONE          guibg=#003300")
 vim.cmd("autocmd ColorScheme * hi DiffChange   guifg=NONE          guibg=#003355")
