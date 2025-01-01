@@ -13,6 +13,7 @@ vim.opt.scrolloff = 8
 vim.opt.updatetime = 50
 vim.opt.undofile = true
 vim.opt.mouse = ""
+vim.opt.splitright = true
 
 vim.g.mapleader = " "
 
