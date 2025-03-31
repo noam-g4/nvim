@@ -3,7 +3,7 @@ require("config.lazy")
 require("config.surroundings")
 require("config.terminal")
 
-vim.cmd([[colorscheme alabaster]])
+vim.cmd([[colorscheme gruvbox]])
 
 local function getMacOSAppearanceMode()
 	local handle = io.popen("defaults read -g AppleInterfaceStyle 2>/dev/null")

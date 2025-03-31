@@ -6,6 +6,16 @@ local function setup()
 				local lspconfig = require("lspconfig")
 				lspconfig[server_name].setup({})
 
+				lspconfig.helm_ls.setup({
+					settings = {
+						["helm-ls"] = {
+							yamlls = {
+								path = "yaml-language-server",
+							},
+						},
+					},
+				})
+
 				lspconfig.ltex.setup({
 					settings = {
 						ltex = {
