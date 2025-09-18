@@ -24,6 +24,7 @@ vim.keymap.set('n', '<leader>gc', builtin.git_bcommits, { desc = 'buffer commits
 vim.keymap.set('n', '<leader>xx', builtin.diagnostics, { desc = 'diagnostics' })
 
 vim.keymap.set('n', 'gr', builtin.lsp_references, { desc = 'goto references' })
+vim.keymap.set('n', 'gd', builtin.lsp_definitions, { desc = 'goto definitions' })
 vim.keymap.set('n', 'gi', builtin.lsp_implementations, { desc = 'goto implementations' })
 vim.keymap.set('n', 'sO', builtin.lsp_document_symbols, { desc = 'document symbols' })
 

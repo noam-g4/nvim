@@ -13,18 +13,9 @@ local module = {}
 
 ---@type vim.lsp.Config
 function module.get_config(capabilities)
-	return {
-		cmd = { 'helm_ls', 'serve' },
-		filetypes = { 'yaml', 'helm', 'yaml.helm-values' },
-		root_markers = { 'Chart.yaml' },
-		capabilities = {
-			workspace = {
-				didChangeWatchedFiles = {
-					dynamicRegistration = true,
-				},
-			},
-		},
-	}
+	local c = require('lspconfig').helm_ls
+	c['filetypes'] = { 'helm', 'yaml.helm_values', 'yaml' }
+	return c
 end
 
 return module

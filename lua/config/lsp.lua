@@ -17,4 +17,3 @@ for _, lsp_name in ipairs(lsp_servers) do
 		vim.lsp.enable(lsp_name)
 	end
 end
-

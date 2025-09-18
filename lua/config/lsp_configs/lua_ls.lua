@@ -1,18 +1,9 @@
 local module = {}
 
 function module.get_config(capabilities)
-	return {
-		capabilities = capabilities,
-		cmd = { 'lua-language-server' },
-		filetypes = { 'lua' },
-		settings = {
-			Lua = {
-				diagnostics = {
-					globals = { "vim" },
-				},
-			},
-		}
-	}
+	local c = vim.lsp.config['lua_ls']
+	c['capabilities'] = capabilities
+	return c
 end
 
 return module

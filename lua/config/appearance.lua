@@ -39,3 +39,10 @@ require("nvim-treesitter.configs").setup({
 		additional_vim_regex_highlighting = false, -- Disable fallback regex highlighting
 	},
 })
+
+local dap = require('dap')
+
+-- This suppresses any window opening during initialization
+dap.listeners.after.event_initialized["no_windows"] = function()
+	vim.cmd("silent! q") -- Close the opened debug windows
+end
