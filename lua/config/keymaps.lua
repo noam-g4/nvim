@@ -22,13 +22,12 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'live grep' })
 vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'buffers' })
 vim.keymap.set('n', '<leader>gc', builtin.git_bcommits, { desc = 'buffer commits' })
 vim.keymap.set('n', '<leader>xx', builtin.diagnostics, { desc = 'diagnostics' })
-
+vim.keymap.set('n', '<leader>2d', ":TodoTelescope<CR>", { desc = 'todos' })
 vim.keymap.set('n', 'gr', builtin.lsp_references, { desc = 'goto references' })
 vim.keymap.set('n', 'gd', builtin.lsp_definitions, { desc = 'goto definitions' })
 vim.keymap.set('n', 'gi', builtin.lsp_implementations, { desc = 'goto implementations' })
 vim.keymap.set('n', 'sO', builtin.lsp_document_symbols, { desc = 'document symbols' })
 
-vim.keymap.set('n', '2d', ":TodoTelescope<CR>", { desc = 'todos' })
 
 -- custom git hack
 local git = require('config/git')
@@ -80,3 +79,7 @@ end)
 vim.keymap.set("n", "<Leader>dt", function()
 	d.terminate()
 end)
+
+-- kulala (http client)
+local k = require("kulala")
+vim.keymap.set('n', '<leader>sr', k.run, { desc = 'diagnostics' })
