@@ -13,7 +13,7 @@ local module = {}
 
 ---@type vim.lsp.Config
 function module.get_config(capabilities)
-	local c = require('lspconfig').helm_ls
+	local c = vim.lsp.config['helm_ls']
 	c['filetypes'] = { 'helm', 'yaml.helm_values', 'yaml' }
 	return c
 end

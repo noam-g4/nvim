@@ -79,7 +79,3 @@ end)
 vim.keymap.set("n", "<Leader>dt", function()
 	d.terminate()
 end)
-
--- kulala (http client)
-local k = require("kulala")
-vim.keymap.set('n', '<leader>sr', k.run, { desc = 'diagnostics' })

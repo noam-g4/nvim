@@ -1,7 +1,7 @@
 local module = {}
 
 function module.get_config(capabilities)
-	local c = require('lspconfig').gopls
+	local c = vim.lsp.config['gopls']
 	c['capabilities'] = capabilities
 	return c
 end
