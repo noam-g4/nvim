@@ -1,5 +1,5 @@
 require('telescope').setup {
-	defaults = {
-		file_ignore_patterns = { ".git/", ".cache", "%.o", "%.a", "%.out", "%.class",
-			"%.pdf", "%.mkv", "%.mp4", "%.zip", "%.jar" } }
+    defaults = {
+        file_ignore_patterns = { ".git/", ".cache", "%.o", "%.a", "%.out", "%.class",
+            "%.pdf", "%.mkv", "%.mp4", "%.zip", "%.jar", "build/", "bin/" } }
 }

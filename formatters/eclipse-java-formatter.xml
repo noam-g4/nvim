@@ -29,9 +29,10 @@
         <setting id="org.eclipse.jdt.core.formatter.indent_empty_lines" value="false"/>
         <setting id="org.eclipse.jdt.core.formatter.use_tabs_only_for_leading_indentations" value="false"/>
 
-        <!-- ── Line length (checkstyle LineLength max=270) ── -->
-        <setting id="org.eclipse.jdt.core.formatter.lineSplit" value="270"/>
-        <setting id="org.eclipse.jdt.core.formatter.comment.line_length" value="270"/>
+        <!-- ── Line length (checkstyle LineLength max=100) ── -->
+        <setting id="org.eclipse.jdt.core.formatter.join_wrapped_lines" value="false" />
+        <setting id="org.eclipse.jdt.core.formatter.lineSplit" value="100"/>
+        <setting id="org.eclipse.jdt.core.formatter.comment.line_length" value="100"/>
 
         <!-- ── Braces — same line / K&R (checkstyle LeftCurly) ── -->
         <setting id="org.eclipse.jdt.core.formatter.brace_position_for_type_declaration" value="end_of_line"/>

@@ -6,7 +6,8 @@ local lsp_servers = {
     "helm_ls",
     "lua_ls",
     "buf_ls",
-    "ts_ls"
+    "ts_ls",
+    "yamlls"
 }
 
 for _, lsp_name in ipairs(lsp_servers) do
